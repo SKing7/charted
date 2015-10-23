@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Timing Charted</title>
+    <meta charset="utf-8">
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/charted.css">
+    <script src="/scripts/lib/jquery.js"></script>
+    <script src="/scripts/lib/es5-shim.js"></script>
+    <script src="/scripts/lib/d3.js"></script>
+    <script src="/scripts/lib/lodash.compat.js"></script>
+    <script src="/scripts/Utils.js"></script>
+    <script src="/scripts/PageData.js"></script>
+    <script src="/scripts/ChartLegend.js"></script>
+    <script src="/scripts/ChartData.js"></script>
+    <script src="/scripts/Chart.js"></script>
+    <script src="/scripts/PageController.js"></script>
+    <script src="/scripts/charted.js"></script>
+  </head>
+
+  <body class="pre-load">
+    <h1 class="page-title">Timing Charted</h1>
+    <h2 class="page-subtitle">Beautiful, automatic charts</h2>
+
+    <form class="load-data-form">
+      <input type="text" class="data-file-input" name="dataUrl" placeholder="input the page path(e.g., /index/index/)">
+      <button type="submit" class="submit">Go</button>
+      <div class="loading-spinner"><img class="loading-spinner-img" src="/images/spinner.svg"></div>
+      <div class="error-message"></div>
+    </form>
+
+    <div class="charts"></div>
+    <footer>
+      <a href="http://m.amap.com/?utm_source=charted" target="_blank">m.amap.com</a>
+      <a href='/?%7B%22dataUrl%22%3A%22%2Findex%2Findex%2F%22%2C%22color%22%3A%22dark%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%2C%22rounding%22%3A%22off%22%2C%22title%22%3A%22%2Findex%2Findex%2F%22%2C%22note%22%3A%22page%22%7D%5D%7D'>举个栗子</a>
+    </footer>
+  </body>
+</html>
