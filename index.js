@@ -5,6 +5,8 @@ var express = require('express')
 var app = express()
 
 app.get('/get', function (req, res) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   var url = req.query.url;
   var baseUrl = 'http://127.0.0.1:3000/reports/'; 
   if (!req.query.url) {
