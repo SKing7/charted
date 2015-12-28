@@ -21,9 +21,10 @@
     "url": "https://github.com/mikesall/charted/issues"
   },
   "dependencies": {
-    "less": "1.7.x",
     "express": "4.10.x",
+    "hawk": "^4.0.1",
     "jshint": "2.5.x",
+    "less": "1.7.x",
     "request": "2.47.x"
   },
   "homepage": "http://www.charted.co/"
