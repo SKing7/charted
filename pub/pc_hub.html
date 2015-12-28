@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Page List Charted</title>
+
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <base href="/hub/" target="_blank">
+    <link rel="stylesheet" href="charted.css">
+    <style>
+        body { position: relative; }
+        footer { bottom: auto; top: 100px; }
+        a { color: #428bca!important; }
+        a:hover { color: #0099ED!important; }
+    </style>
+  </head>
+
+  <body class="pre-load">
+    <h1 class="page-title">Page List Charted</h1>
+    <footer id="ft"></footer>
+    <script>
+        ~function () {
+            var listObj = {
+                'pc_rt_mapshow'         : '地图展示',
+                'pc_rt_mapLoad'         : '地图下载',
+                'pc_rt_mapfileLoad'         : '地图文件下载',
+            };  
+            var api = {
+            };
+            var tpl = '<a target="_blank" href=\'?{"dataUrl":"{{page}}","charts":[{"type":"line","rounding":"off","title":"{{pa}}","note":"{{note}}"}]}\'>{{pa}}</a>';
+            var html = '';
+            var tmp;
+            var note = '';
+            for (var p in listObj) {
+                tmp = tpl;
+                note = p;
+                if (listObj.hasOwnProperty(p)) {
+                    html += tmp.replace(/\{\{page\}\}/g, p).replace(/\{\{pa\}\}/g, listObj[p]).replace(/\{\{note\}\}/g, api[p] ? 'API: ' + api[p] : '');
+                }
+            }
+            document.getElementById('ft').innerHTML = html;
+        }();
+    </script>
+  </body>
+</html>
