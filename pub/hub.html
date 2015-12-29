@@ -7,7 +7,8 @@
     <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/charted.css">
+    <base href="/hub/" target="_blank">
+    <link rel="stylesheet" href="charted.css">
     <style>
         body { position: relative; }
         footer { bottom: auto; top: 100px; }
@@ -33,7 +34,7 @@
                 '/search/view/'         : '/service/poi/keywords.json',
                 '/detail/index/'        : '/service/valueadded/infosearch.json',
             };
-            var tpl = '<a target="_blank" href=\'/?{"dataUrl":"{{page}}","charts":[{"type":"line","rounding":"off","title":"{{pa}}","note":"{{note}}"}]}\'>{{pa}}</a>';
+            var tpl = '<a target="_blank" href=\'?{"dataUrl":"{{page}}","charts":[{"type":"line","rounding":"off","title":"{{pa}}","note":"{{note}}"}]}\'>{{pa}}</a>';
             var html = '';
             var tmp;
             var note = '';
