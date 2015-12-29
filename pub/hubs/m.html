@@ -7,7 +7,7 @@
     <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <base href="/hub/" target="_blank">
+    <base href="/pub/" target="_blank">
     <link rel="stylesheet" href="charted.css">
     <style>
         body { position: relative; }
@@ -23,11 +23,16 @@
     <script>
         ~function () {
             var listObj = {
-                'pc_rt_mapshow'         : '地图展示',
-                'pc_rt_mapLoad'         : '地图下载',
-                'pc_rt_mapfileLoad'         : '地图文件下载',
+                '/index/index/'         : '首页',
+                '/search/view/'         : '搜索结果列表页',
+                '/search/mapview/'      : '搜索结果图面页',
+                '/detail/index/'        : 'POI详情页',
+                '/navigation/index/'    : '路线首页',
+                '/navigation/buslist/'  : '公交导航结果页',
             };  
             var api = {
+                '/search/view/'         : '/service/poi/keywords.json',
+                '/detail/index/'        : '/service/valueadded/infosearch.json',
             };
             var tpl = '<a target="_blank" href=\'?{"dataUrl":"{{page}}","charts":[{"type":"line","rounding":"off","title":"{{pa}}","note":"{{note}}"}]}\'>{{pa}}</a>';
             var html = '';
